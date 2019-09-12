@@ -1,7 +1,8 @@
 @import "utilities/_reset.scss";
 @import "utilities/_config";
 
-body {
-  .container {background: $couleur}
-}
+.container {background: $couleur}
+
+.flex{max-width: 80%; display: flex; flex-wrap: wrap}
+.flex-fluid{display: flex; flex-wrap: wrap}
 
