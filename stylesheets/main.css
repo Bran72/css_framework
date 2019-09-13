@@ -17,62 +17,56 @@
 .content {
   flex-basis: calc(100%/4 - 16px);
   height: 6rem;
-<<<<<<< HEAD
-  background: red; }
-
-=======
   background: red;
   margin: 8px; }
 
-.flex-sb {
-  justify-content: "space-between"; }
+.flex-jc-sb {
+  justify-content: space-between; }
 
-.flex-c {
-  justify-content: "center"; }
+.flex-jc-c {
+  justify-content: center; }
 
-.flex-s {
-  justify-content: "stretch"; }
+.flex-jc-s {
+  justify-content: stretch; }
 
-.flex-b {
-  align-items: "baseline"; }
+.flex-align-b {
+  align-items: baseline; }
 
-.flex-c {
-  align-items: "center"; }
+.flex-align-c {
+  align-items: center; }
 
-.flex-fe {
-  align-items: "flex-end"; }
+.flex-align-fe {
+  align-items: flex-end; }
 
-.flex-fs {
-  align-items: "flex-start"; }
+.flex-align-fs {
+  align-items: flex-start; }
 
-.flex-inh {
-  align-items: "inherit"; }
+.flex-align-inh {
+  align-items: inherit; }
 
-.flex-ini {
-  align-items: "initial"; }
+.flex-align-ini {
+  align-items: initial; }
 
-.flex-s {
-  align-items: "stretch"; }
+.flex-align-s {
+  align-items: stretch; }
 
->>>>>>> 434fbaf1ae6599920e8bf6c17f09f912f9feccc5
-.flex-column {
+.flex-dir-column {
   flex-direction: "column"; }
 
-.flex-row {
+.flex-dir-row {
   flex-direction: "row"; }
 
-.flex-column-reverse {
+.flex-dir-column-reverse {
   flex-direction: "column-reverse"; }
 
-.flex-row-reverse {
+.flex-dir-row-reverse {
   flex-direction: "row-reverse"; }
 
-.flex-inherit {
+.flex-dir-inherit {
   flex-direction: "inherit"; }
 
-.flex-initial {
+.flex-dir-initial {
   flex-direction: "initial"; }
-<<<<<<< HEAD
 
 div[class*="item-"] {
   margin: 16px; }
@@ -96,7 +90,5 @@ div[class*="item-"] {
   flex-basis: calc(((100%/4) / 4) - 32px);
   height: 6rem;
   background: red; }
-=======
->>>>>>> 434fbaf1ae6599920e8bf6c17f09f912f9feccc5
 
 /*# sourceMappingURL=main.css.map */

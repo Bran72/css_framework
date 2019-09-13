@@ -32,14 +32,14 @@ $flex_basis: '100%/'$grille;
 =======
 //Loop on justify-content attributes
 @each $key, $i in $justify_c {
-  .flex-#{$key} {
+  .flex-jc-#{$key} {
       justify-content: $i; 
   }
 }
 
 //Loop on align-items attributes
 @each $key, $i in $align-items {
-  .flex-#{$key} {
+  .flex-align-#{$key} {
       align-items: $i; 
   }
 }
@@ -47,7 +47,7 @@ $flex_basis: '100%/'$grille;
 >>>>>>> 434fbaf1ae6599920e8bf6c17f09f912f9feccc5
 // Flex Direction
 @each $key,$i in $flex-d {
-  .flex-#{$i} {
+  .flex-dir-#{$i} {
     flex-direction: $i;
   }
 }
