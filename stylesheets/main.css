@@ -1,13 +1,22 @@
-.container {
-  background: #fff; }
-
 .flex {
-  max-width: 80%;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: auto; }
 
 .flex-fluid {
   display: flex;
   flex-wrap: wrap; }
+
+.flex-auto {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1; }
+
+.content {
+  flex-basis: calc(100%/4 - 16px);
+  height: 6rem;
+  background: red;
+  margin: 8px; }
 
 /*# sourceMappingURL=main.css.map */
