@@ -1,5 +1,5 @@
 # css_framework
-*CSS framework, don't by shy and try to use it: you'll love it ! 😉*
+*CSS framework, don't be shy and try to use it: you'll love it ! 😉*
 
 ---
 

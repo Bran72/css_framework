@@ -26,9 +26,10 @@ $flex_basis: '100%/'$grille;
   flex-basis: calc(100%/#{$grille} - #{$margin}px);
   height: 6rem;
   background: red;
-  margin: #{$margin/2}px
 }
 
+<<<<<<< HEAD
+=======
 //Loop on justify-content attributes
 @each $key, $i in $justify_c {
   .flex-jc-#{$key} {
@@ -43,9 +44,26 @@ $flex_basis: '100%/'$grille;
   }
 }
 
+>>>>>>> 434fbaf1ae6599920e8bf6c17f09f912f9feccc5
 // Flex Direction
 @each $key,$i in $flex-d {
   .flex-dir-#{$i} {
     flex-direction: $i;
   }
 }
+<<<<<<< HEAD
+
+div[class*="item-"]{
+  margin: #{$margin}px
+}
+
+@for $i from 1 to $grille+1{
+  .item-#{$i}{
+    //flex-basis: calc(100%/#{$grille} - #{$margin}px);
+    flex-basis: calc(((100%/#{$grille}) / #{$i}) - #{$margin*2}px);
+    height: 6rem;
+    background: red;
+  }
+}
+=======
+>>>>>>> 434fbaf1ae6599920e8bf6c17f09f912f9feccc5
