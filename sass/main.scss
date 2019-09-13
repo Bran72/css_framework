@@ -28,8 +28,30 @@ $flex_basis: '100%/'$grille;
   background: red;
 }
 
-<<<<<<< HEAD
-=======
+div[class*="item-"]{
+  margin: #{$margin}px
+}
+
+div[class*="item-"]{
+  &.mr-auto{
+    margin-right: auto;
+  }
+  &.ml-auto{
+    margin-left: auto;
+  }
+}
+
+@for $i from 1 to $grille+1{
+  .item-#{$i}{
+    //flex-basis: calc(100%/#{$grille} - #{$margin}px);
+    //flex-basis: calc(((100%/#{$i}) / #{$grille}) - #{$margin*2}px);
+    $calc: $i / $grille;
+    flex-basis: calc(((#{$calc * 1%})*100) - #{$margin*2});
+    height: 6rem;
+    background: red;
+  }
+}
+
 //Loop on justify-content attributes
 @each $key, $i in $justify_c {
   .flex-jc-#{$key} {
@@ -44,26 +66,16 @@ $flex_basis: '100%/'$grille;
   }
 }
 
->>>>>>> 434fbaf1ae6599920e8bf6c17f09f912f9feccc5
 // Flex Direction
 @each $key,$i in $flex-d {
   .flex-dir-#{$i} {
     flex-direction: $i;
   }
 }
-<<<<<<< HEAD
 
-div[class*="item-"]{
-  margin: #{$margin}px
-}
-
-@for $i from 1 to $grille+1{
-  .item-#{$i}{
-    //flex-basis: calc(100%/#{$grille} - #{$margin}px);
-    flex-basis: calc(((100%/#{$grille}) / #{$i}) - #{$margin*2}px);
-    height: 6rem;
-    background: red;
+$order: 20;
+@for $i from 1 to $order+1{
+  .order-#{$i}{
+    order: #{$i};
   }
 }
-=======
->>>>>>> 434fbaf1ae6599920e8bf6c17f09f912f9feccc5
