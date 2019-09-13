@@ -28,3 +28,25 @@ $flex_basis: '100%/'$grille;
   background: red;
   margin: #{$margin/2}px
 }
+
+//Loop on justify-content attributes
+@each $key, $i in $justify_c {
+  .flex-#{$key} {
+      justify-content: $i; 
+  }
+}
+
+//Loop on align-items attributes
+@each $key, $i in $align-items {
+  .flex-#{$key} {
+      align-items: $i; 
+  }
+}
+
+// Flex Direction
+
+@each $key,$i in $flex-d {
+  .flex-#{$i} {
+    flex-direction: $i;
+  }
+}
