@@ -1,3 +1,12 @@
 $grille: 4;
 // $couleur: #fff; //hexa code
 $margin: 16; //value in px
+
+$flex-d:(
+  "1":"column",
+  "2":"row",
+  "3":"column-reverse",
+  "4":"row-reverse",
+  "5":"inherit",
+  "6":"initial"
+)

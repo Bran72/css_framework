@@ -28,3 +28,12 @@ $flex_basis: '100%/'$grille;
   background: red;
   margin: #{$margin/2}px
 }
+
+
+// Flex Direction
+
+@each $key,$i in $flex-d {
+  .flex-#{$i} {
+    flex-direction: $i;
+  }
+}
