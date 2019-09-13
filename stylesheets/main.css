@@ -1,28 +1,102 @@
+/* ----------------------- Config file -----------------------  */
 .flex {
   display: flex;
   flex-wrap: wrap;
   max-width: 80%;
-  margin: auto;
-}
+  margin: auto; }
 
 .flex-fluid {
   display: flex;
-  flex-wrap: wrap;
-}
+  flex-wrap: wrap; }
 
 .flex-auto {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
-}
+  flex-grow: 1; }
 
 .content {
   flex-basis: calc(100%/4 - 16px);
   height: 6rem;
-  background: red;
-  margin: 8px;
-}
+<<<<<<< HEAD
+  background: red; }
 
-/*# sourceMappingURL=main.css.map */
+=======
+  background: red;
+  margin: 8px; }
+
+.flex-sb {
+  justify-content: "space-between"; }
+
+.flex-c {
+  justify-content: "center"; }
+
+.flex-s {
+  justify-content: "stretch"; }
+
+.flex-b {
+  align-items: "baseline"; }
+
+.flex-c {
+  align-items: "center"; }
+
+.flex-fe {
+  align-items: "flex-end"; }
+
+.flex-fs {
+  align-items: "flex-start"; }
+
+.flex-inh {
+  align-items: "inherit"; }
+
+.flex-ini {
+  align-items: "initial"; }
+
+.flex-s {
+  align-items: "stretch"; }
+
+>>>>>>> 434fbaf1ae6599920e8bf6c17f09f912f9feccc5
+.flex-column {
+  flex-direction: "column"; }
+
+.flex-row {
+  flex-direction: "row"; }
+
+.flex-column-reverse {
+  flex-direction: "column-reverse"; }
+
+.flex-row-reverse {
+  flex-direction: "row-reverse"; }
+
+.flex-inherit {
+  flex-direction: "inherit"; }
+
+.flex-initial {
+  flex-direction: "initial"; }
+<<<<<<< HEAD
+
+div[class*="item-"] {
+  margin: 16px; }
+
+.item-1 {
+  flex-basis: calc(((100%/4) / 1) - 32px);
+  height: 6rem;
+  background: red; }
+
+.item-2 {
+  flex-basis: calc(((100%/4) / 2) - 32px);
+  height: 6rem;
+  background: red; }
+
+.item-3 {
+  flex-basis: calc(((100%/4) / 3) - 32px);
+  height: 6rem;
+  background: red; }
+
+.item-4 {
+  flex-basis: calc(((100%/4) / 4) - 32px);
+  height: 6rem;
+  background: red; }
+=======
+>>>>>>> 434fbaf1ae6599920e8bf6c17f09f912f9feccc5
 
 /*# sourceMappingURL=main.css.map */
