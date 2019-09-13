@@ -1,3 +1,4 @@
+/* ----------------------- Config file -----------------------  */
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -18,5 +19,35 @@
   height: 6rem;
   background: red;
   margin: 8px; }
+
+.flex-sb {
+  justify-content: "space-between"; }
+
+.flex-c {
+  justify-content: "center"; }
+
+.flex-s {
+  justify-content: "stretch"; }
+
+.flex-b {
+  align-items: "baseline"; }
+
+.flex-c {
+  align-items: "center"; }
+
+.flex-fe {
+  align-items: "flex-end"; }
+
+.flex-fs {
+  align-items: "flex-start"; }
+
+.flex-inh {
+  align-items: "inherit"; }
+
+.flex-ini {
+  align-items: "initial"; }
+
+.flex-s {
+  align-items: "stretch"; }
 
 /*# sourceMappingURL=main.css.map */
