@@ -19,4 +19,22 @@
   background: red;
   margin: 8px; }
 
+.flex-column {
+  flex-direction: "column"; }
+
+.flex-row {
+  flex-direction: "row"; }
+
+.flex-column-reverse {
+  flex-direction: "column-reverse"; }
+
+.flex-row-reverse {
+  flex-direction: "row-reverse"; }
+
+.flex-inherit {
+  flex-direction: "inherit"; }
+
+.flex-initial {
+  flex-direction: "initial"; }
+
 /*# sourceMappingURL=main.css.map */
