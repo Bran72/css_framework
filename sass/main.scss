@@ -42,3 +42,11 @@ $flex_basis: '100%/'$grille;
       align-items: $i; 
   }
 }
+
+// Flex Direction
+
+@each $key,$i in $flex-d {
+  .flex-#{$i} {
+    flex-direction: $i;
+  }
+}
