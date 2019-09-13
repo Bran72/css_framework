@@ -1,7 +1,39 @@
 @import "utilities/_reset.scss";
 @import "utilities/_config";
 
-body {
-  .container {background: $couleur}
+//.container {background: $couleur}
+$flex_basis: '100%/'$grille;
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: auto;
 }
 
+.flex-fluid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-auto {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.content {
+  flex-basis: calc(100%/#{$grille} - #{$margin}px);
+  height: 6rem;
+  background: red;
+  margin: #{$margin/2}px
+}
+
+
+// Flex Direction
+
+@each $key,$i in $flex-d {
+  .flex-#{$i} {
+    flex-direction: $i;
+  }
+}
