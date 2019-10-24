@@ -28,17 +28,21 @@ $flex_basis: '100%/'$grille;
   background: red;
 }
 
-div[class*="item-"]{
+[class*="item-"]{
   margin: #{$margin}px
 }
 
-div[class*="item-"]{
+[class*="item-"]{
   &.mr-auto{
     margin-right: auto;
   }
   &.ml-auto{
     margin-left: auto;
   }
+}
+
+.flex-full-width{
+  flex-basis: 100%;
 }
 
 @for $i from 1 to $grille+1{
