@@ -19,13 +19,16 @@
   height: 6rem;
   background: red; }
 
-div[class*="item-"] {
+[class*="item-"] {
   margin: 16px; }
 
-div[class*="item-"].mr-auto {
+[class*="item-"].mr-auto {
   margin-right: auto; }
-div[class*="item-"].ml-auto {
+[class*="item-"].ml-auto {
   margin-left: auto; }
+
+.flex-full-width {
+  flex-basis: 100%; }
 
 .item-1 {
   flex-basis: calc(((0.25%)*100) - 32px);
