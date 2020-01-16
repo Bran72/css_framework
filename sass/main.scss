@@ -4,6 +4,7 @@
 //.container {background: $couleur}
 $flex_basis: '100%/'$grille;
 
+/* ===== DEDICATED PART TO FLEX ===== */
 .flex {
   display: flex;
   flex-wrap: wrap;
@@ -45,6 +46,11 @@ $flex_basis: '100%/'$grille;
   flex-basis: 100%;
 }
 
+.wrap{
+  flex-wrap: wrap;
+}
+
+/* ===== Loop for justify-content / align-items ===== */
 @for $i from 1 to $grille+1{
   .item-#{$i}{
     //flex-basis: calc(100%/#{$grille} - #{$margin}px);
@@ -56,17 +62,17 @@ $flex_basis: '100%/'$grille;
   }
 }
 
-//Loop on justify-content attributes
+// Loop on justify-content attributes
 @each $key, $i in $justify_c {
-  .flex-jc-#{$key} {
-      justify-content: $i; 
+  .jc-#{$key} {
+    justify-content: $i;
   }
 }
 
 //Loop on align-items attributes
 @each $key, $i in $align-items {
   .flex-align-#{$key} {
-      align-items: $i; 
+    align-items: $i;
   }
 }
 
@@ -82,4 +88,260 @@ $order: 20;
   .order-#{$i}{
     order: #{$i};
   }
+}
+
+
+/* ==================== GLOBAL CLASSES ==================== */
+@for $i from 1 to 10{
+  // margin
+  .mg-#{$i}{
+    margin: #{(($i*10)/$rem_ratio)}rem;
+  }
+  .mg-t-#{$i}{
+    margin-top: #{(($i*10)/$rem_ratio)}rem;
+  }
+  .mg-r-#{$i}{
+    margin-right: #{(($i*10)/$rem_ratio)}rem;
+  }
+  .mg-b-#{$i}{
+    margin-bottom: #{(($i*10)/$rem_ratio)}rem;
+  }
+  .mg-l-#{$i}{
+    margin-left: #{(($i*10)/$rem_ratio)}rem;
+  }
+  .mg-v-#{$i}{ // v for vertical
+    margin: 0 #{(($i*10)/$rem_ratio)}rem;
+  }
+  .mg-h-#{$i}{ // h for horizontal
+    margin: #{(($i*10)/$rem_ratio)}rem 0;
+  }
+
+  // padding
+  .pd-#{$i}{
+    margin: #{(($i*10)/$rem_ratio)}rem;
+  }
+  .pd-t-#{$i}{
+    margin-top: #{(($i*10)/$rem_ratio)}rem;
+  }
+  .pd-r-#{$i}{
+    margin-right: #{(($i*10)/$rem_ratio)}rem;
+  }
+  .pd-b-#{$i}{
+    margin-bottom: #{(($i*10)/$rem_ratio)}rem;
+  }
+  .pd-l-#{$i}{
+    margin-left: #{(($i*10)/$rem_ratio)}rem;
+  }
+  .pd-v-#{$i}{ // v for vertical
+    margin: 0 #{(($i*10)/$rem_ratio)}rem;
+  }
+  .pd-h-#{$i}{ // h for horizontal
+    margin: #{(($i*10)/$rem_ratio)}rem 0;
+  }
+}
+
+// Loop on colors array
+@each $key, $i in $colors {
+  .color-#{$key} {
+    color: $key;
+  }
+  .color-transparent {
+    color: rgba(0, 0, 0, 0)
+  }
+}
+
+// Loop for opacity
+$i-opacity: 0;
+@while($i-opacity < 1) {
+  .opacity-#{round($i-opacity*10)} {
+    opacity: ($i-opacity);
+  }
+  $i-opacity: $i-opacity + 0.1;
+}
+
+// POSITION
+@each $i in $positions {
+  .pos-#{$i} {
+    position: $i;
+  }
+}
+// top / right / bottom / left positionning
+.top-init{top: 0}
+.right-init{right: 0}
+.bottom-init{bottom: 0}
+.left-init{left: 0}
+$i-position: 0;
+@while($i-position < 100) {
+  .top-#{round($i-position/10)} {
+    top: #{($i-position)*1%};
+  }
+  .right-#{round($i-position/10)} {
+    top: #{($i-position)*1%};
+  }
+  .bottom-#{round($i-position/10)} {
+    top: #{($i-position)*1%};
+  }
+  .left-#{round($i-position/10)} {
+    top: #{($i-position)*1%};
+  }
+  $i-position: $i-position + 10;
+}
+
+// display
+@each $i in $displays {
+  .disp-#{$i} {
+    display: $i;
+  }
+}
+
+// background-color
+@each $i in $colors {
+  .bck-color-#{$i} {
+    background-color: $i;
+  }
+}
+
+// BOX SHADOW
+
+// OBJECT-FIT
+
+// BORDER --> radius / color / type (inset, solid, dotted,...)
+// border-radius
+@for $i from 1 to 50{
+  .radius-#{$i}{
+    border-radius: #{$i}px;
+  }
+}
+
+// MAX-WIDTH
+
+// MAX-HEIGHT
+
+// TEXT-ALIGN
+@each $i in $aligns {
+  .text-#{$i} {
+    text-align: $i;
+  }
+}
+
+
+/* ==================== DEDICATED PART TO WIDGETS ==================== */
+// Card
+.card{
+  width: 200px;
+  height: 300px; // height in auto ?
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #c4c4c4;
+  .card-header{
+    width: 100%;
+    min-height: 15%;
+    border-bottom: 1px solid lightgrey;
+  }
+  .card-body{
+    width: auto;
+    height: 100%;
+    padding: 1.5rem;
+  }
+  .card-footer{
+    width: 100%;
+    min-height: 15%;
+    border-top: 1px solid lightgrey;
+  }
+}
+
+// Alerts
+.alert{
+  position: relative;
+  width: 100%;
+  min-height: 7.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: #00d1b2;
+  &.alert-success{background-color: #00d1b2}
+  &.alert-info{background-color: #3298dc}
+  &.alert-warning{background-color: #ffdd57}
+  &.alert-danger{background-color: #f14668}
+  .alert-close{
+    position: absolute;
+    left: .5rem;
+    top: .5rem;
+    background-color: rgba(10,10,10,.2);
+    border: none;
+    border-radius: 290486px;
+    cursor: pointer;
+    pointer-events: auto;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 0;
+    height: 20px;
+    max-height: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    min-width: 20px;
+    outline: 0;
+    vertical-align: top;
+    width: 20px;
+    &::before{
+      height: 2px;
+      width: 50%;
+    }
+    &::after{
+      height: 50%;
+      width: 2px;
+    }
+    &::after, &::before {
+      background-color: #fff;
+      content: "";
+      display: block;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      transform-origin: center center;
+    }
+  }
+  .alert-body{
+    width: auto;
+    height: 100%;
+    padding: 0 1rem;
+  }
+}
+
+// Modals
+
+// Notifications (?)
+
+// Buttons
+
+
+
+/* ==================== MEDIA QUERIES ==================== */
+// class 'xl-*'
+@media only screen and (max-width: 1900px) {
+  [class*="xl-"] {
+    max-width: 1900px;
+  }
+}
+
+// class 'lg-*'
+@media only screen and (max-width: 1500px) {
+
+}
+
+// class 'md-*'
+@media only screen and (max-width: 1200px) {
+
+}
+
+//class 'sm-*'
+@media only screen and (max-width: 960px) {
+
+}
+
+// class 'xs-*'
+@media only screen and (max-width: 550px) {
+
 }

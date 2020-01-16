@@ -1,19 +1,22 @@
 
 /* ----------------------- Config file -----------------------  */
 
-//Grid size by default
+// Grid size by default
 $grille: 4;
 
 // $couleur: #fff; //hexa code
 $margin: 16; //value in px
 
-//List of justify-content attributes
-$justify_c: ("sb": space-between, "c": center, "s": stretch);
+// Ratio PX / REM
+$rem_ratio: 16;
 
-//List of align-items attributes
+// List of justify-content attributes
+$justify_c: ("sb": space-between, "sa": space-around, "se": space-evenly, "c": center, "s": stretch);
+
+// List of align-items attributes
 $align-items: ("b": baseline, "c": center, "fe": flex-end, "fs": flex-start, "inh": inherit, "ini": initial, "s": stretch);
 
-//List of direction attributes
+// List of direction attributes
 $flex-d:(
   "1":"column",
   "2":"row",
@@ -21,4 +24,28 @@ $flex-d:(
   "4":"row-reverse",
   "5":"inherit",
   "6":"initial"
-)
+);
+
+// List of primary colors
+$colors: (red, green, blue, orange, yellow, grey);
+
+// List of positions
+$positions: (absolute, relative, static, fixed, sticky, revert, inherit, initial);
+
+// List of displays
+$displays: (flex, block, inline, inline-block, content, grid, inline-grid, inline-flex);
+
+$aligns: (top, right, bottom, left);
+
+
+// Prefixer "function"
+@mixin prefix($map, $vendors: webkit khtml moz ms o) {
+  @each $prop, $value in $map {
+    @if $vendors {
+      @each $vendor in $vendors {
+        #{"-" + $vendor + "-" + $prop}: #{$value};
+      }
+    }
+    #{$prop}: #{$value};
+  }
+}
